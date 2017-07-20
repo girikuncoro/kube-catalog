@@ -50,7 +50,14 @@ const catalog = {
       imageSrc: (data.imageSrc || 'img/kubernetes/k8s'),
     };
 
-    const submit = type === 'bundled' ? 'Customize' : 'Deploy';
+    let submit, submitLink;
+    if (type === 'standalone') {
+      submit = 'Deploy';
+      submitLink = '#';
+    } else if (type === 'bundled') {
+      submit = 'Customize';
+      submitLink = 'bundle.html';
+    }
 
     $('.' + type + ' .row-' + count + ' div.product-carousel-active').append(' \
       <div class="col-lg-12"> \
@@ -61,7 +68,7 @@ const catalog = {
               <img src="' + service.imageSrc + '-2.png" class="seceond_img" alt="" /> \
             </a> \
             <div class="new-product-action"> \
-              <a href="#"><span class="lnr"></span>' + submit + '</a> \
+              <a href="' + submitLink + '"><span class="lnr"></span>' + submit + '</a> \
             </div> \
           </div> \
           <div class="product-content text-center"> \
