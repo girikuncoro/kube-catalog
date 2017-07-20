@@ -1,9 +1,9 @@
 const CATALOG_PER_ROW = 5;
 const BUNDLE_PER_ROW = 3;
 
-// const standaloneServiceEndpoint = 'mock-data/standalone-service.json';
-const baseUrl = 'http://orch.kubelink.borathon.photon-infra.com';
-const standaloneServiceEndpoint = baseUrl + '/catalog/standalone';
+const standaloneServiceEndpoint = 'mock-data/standalone-service.json';
+// const baseUrl = 'http://orch.kubelink.borathon.photon-infra.com';
+// const standaloneServiceEndpoint = baseUrl + '/catalog/standalone';
 const bundledServiceEndpoint = 'mock-data/bundled-service.json';
 
 let row = 0;

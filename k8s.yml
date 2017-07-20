@@ -1,0 +1,32 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: kubelink-ui-deployment
+  namespace: kubelink
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: kubelink
+        role: frontend
+    spec:
+      containers:
+      - name: kubelink-ui
+        image: girikuncoro/kubelink-ui
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: kubelink-ui
+  namespace: kubelink
+spec:
+  selector:
+    app: kubelink
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

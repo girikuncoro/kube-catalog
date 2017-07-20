@@ -1,37 +1,48 @@
 {
+  "name": "Blog Platform",
+  "imgSrc": "img/kubernetes/bundle-blog",
+  "id": "blog-platform-id",
   "data": {
     "database": [
       {
+        "id": "mysql-id",
         "name": "MySQL",
         "imageSrc": "img/kubernetes/mysql"
       },
       {
+        "id": "mariadb-id",
         "name": "Maria DB",
         "imageSrc": "img/kubernetes/mariadb"
       },
       {
+        "id": "postgres-id",
         "name": "PostgreSQL",
         "imageSrc": "img/kubernetes/postgres"
       },
       {
+        "id": "cockroach-id",
         "name": "Cockroach DB",
         "imageSrc": "img/kubernetes/cockroachdb"
       }
     ],
     "blog": [
       {
+        "id": "wordpress-id",
         "name": "Wordpress",
-        "imageSrc": "img/kubernetes/k8s"
+        "imageSrc": "img/kubernetes/wordpress"
       },
       {
+        "id": "joomla-id",
         "name": "Joomla",
         "imageSrc": "img/kubernetes/k8s"
       },
       {
+        "id": "drupal-id",
         "name": "Drupal",
-        "imageSrc": "img/kubernetes/k8s"
+        "imageSrc": "img/kubernetes/drupal"
       },
       {
+        "id": "ghost-id",
         "name": "Ghost",
         "imageSrc": "img/kubernetes/k8s"
       }

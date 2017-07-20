@@ -1,0 +1,75 @@
+{
+  "name": "CI/CD Platform",
+  "imgSrc": "img/kubernetes/bundle-cicd",
+  "id": "cicd-id",
+  "data": {
+    "code-repo": [
+      {
+        "id": "gitlab-id",
+        "name": "Gitlab",
+        "imageSrc": "img/kubernetes/gitlab"
+      },
+      {
+        "id": "gogs-id",
+        "name": "Gogs",
+        "imageSrc": "img/kubernetes/gogs"
+      },
+      {
+        "id": "gerrit-id",
+        "name": "Gerrit",
+        "imageSrc": "img/kubernetes/gerrit"
+      },
+      {
+        "id": "gitbucket-id",
+        "name": "Gitbucket",
+        "imageSrc": "img/kubernetes/k8s"
+      },
+      {
+        "id": "gitea-id",
+        "name": "Gitea",
+        "imageSrc": "img/kubernetes/k8s"
+      }
+    ],
+    "continuous-integration": [
+      {
+        "id": "jenkins-id",
+        "name": "Jenkins",
+        "imageSrc": "img/kubernetes/jenkins"
+      },
+      {
+        "id": "drone-id",
+        "name": "Drone",
+        "imageSrc": "img/kubernetes/k8s"
+      },
+      {
+        "id": "concourse-id",
+        "name": "Concourse",
+        "imageSrc": "img/kubernetes/k8s"
+      },
+      {
+        "id": "factor-id",
+        "name": "Factor",
+        "imageSrc": "img/kubernetes/k8s"
+      }
+    ],
+    "artifact": [
+      {
+        "id": "artifactory-id",
+        "name": "JFrog Artifactory",
+        "imageSrc": "img/kubernetes/artifactory"
+      }
+    ],
+    "continuous-deployment": [
+      {
+        "id": "spinnaker-id",
+        "name": "Spinnaker",
+        "imageSrc": "img/kubernetes/spinnaker"
+      },
+      {
+        "id": "nexus-id",
+        "name": "Nexus",
+        "imageSrc": "img/kubernetes/k8s"
+      }
+    ]
+  }
+}
