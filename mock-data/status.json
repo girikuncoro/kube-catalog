@@ -1,0 +1,21 @@
+{
+	"status": "OK", 
+	"data": [
+		{
+			"name": "psql", 
+			"id": "id1", 
+  			"bundle": "bundle1", 
+  			"access_url": "www.vmware.com", 
+  			"credential": "credential1", 
+  			"status": "starting"
+	  	},
+	  	{
+	  		"name": "tomcat", 
+	  		"id": "id2", 
+  			"bundle": "bundle2", 
+  			"access_url": "www.tomcat.com", 
+  			"credential": "credential2", 
+  			"status": "running"
+		}
+	]
+}
