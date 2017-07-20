@@ -1,10 +1,12 @@
 const CATALOG_PER_ROW = 5;
 const BUNDLE_PER_ROW = 3;
 
-const standaloneServiceEndpoint = 'mock-data/standalone-service.json';
-// const baseUrl = 'http://orch.kubelink.borathon.photon-infra.com';
-// const standaloneServiceEndpoint = baseUrl + '/catalog/standalone';
-const bundledServiceEndpoint = 'mock-data/bundled-service.json';
+// const standaloneServiceEndpoint = 'mock-data/standalone-service.json';
+// const bundledServiceEndpoint = 'mock-data/bundled-service.json';
+const baseUrl = 'http://orch.kubelink.borathon.photon-infra.com';
+// const baseUrl = '10.2.1.128:5000';
+const standaloneServiceEndpoint = baseUrl + '/catalog/standalone';
+const bundledServiceEndpoint = baseUrl + '/catalog/bundles';
 
 let row = 0;
 
@@ -140,7 +142,17 @@ const eventHandlerInit = () => {
 
     console.log(serviceID);
     console.log(cache);
-    $.post(standaloneServiceEndpoint, { name: cache.standalone[serviceID], id: serviceID } );
+    console.log(cache.standalone[serviceID]);
+
+    $.ajax({
+      url: standaloneServiceEndpoint,
+      type: "POST",
+      data: JSON.stringify({ "name": cache.standalone[serviceID], "id": serviceID }),
+      contentType: "application/json",
+      success: function(data){
+        console.log(data);
+      }
+    })
   })
 
   $('a[href="#kubelink-deploy-bundle"]').click(function() {

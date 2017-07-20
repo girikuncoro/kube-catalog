@@ -2,7 +2,9 @@ const CATALOG_PER_ROW = 5;
 const BUNDLE_PER_ROW = 3;
 
 // const serviceEndpoint = 'mock-data/blog-service.json';
-const serviceEndpoint = 'mock-data/cicd-service.json';
+// const serviceEndpoint = 'mock-data/cicd-service.json';
+const baseUrl = 'http://orch.kubelink.borathon.photon-infra.com';
+const serviceEndpoint = baseUrl + '/catalog/bundles';
 
 let row = 0;
 let config = {};
@@ -11,7 +13,7 @@ const bundle = {
   injectDiagram(data) {
     const bundle = {
       id: data.id || 'bundle-id',
-      imgSrc: data.imgSrc || 'img/kubernetes/bundle-blog',
+      imgSrc: data.imageSrc || 'img/kubernetes/bundle-blog',
       name: data.name || 'Kubelink bundle',
     };
 
@@ -94,29 +96,54 @@ const bundle = {
 
   populateBundle() {
     return new Promise((resolve, reject) => {
-
-      $.getJSON(serviceEndpoint, (res) => {
+      const bundleID = window.location.href.match(/id=([^&]+)/)[1];
+      console.log(bundleID);
+      $.getJSON(serviceEndpoint + '/' + bundleID, (res) => {
         console.log(res.data);
-        this.injectDiagram(res);
-        for (let k in res.data) {
-          row = 0;
-          this.injectTitle.service(k);
-          config[k] = "";
+        console.log(res.data.components);
+        this.injectDiagram(res.data);
+        res.data.components.forEach((data, i) => {
+          console.log(data);
+          for (let k in data) {
+            row = 0;
+            this.injectTitle.service(k);
+            config[k] = "";
 
-          res.data[k].forEach((d, i) => {
-            if ((Math.floor(i / CATALOG_PER_ROW)) === row) {
-              this.injectRow(row, k);
-              row++;
-            }
-            this.injectService(row-1, d, k);
+            data[k].forEach((d, i) => {
+              if ((Math.floor(i / CATALOG_PER_ROW)) === row) {
+                this.injectRow(row, k);
+                row++;
+              }
+              this.injectService(row-1, d, k);
+            })
+          }
 
-            if (i === res.data[k].length - 1) {
-              console.log(config);
-              initEventHandler();
-              resolve(true);
-            }
-          })
-        }
+          if (i === res.data.components.length - 1) {
+                console.log(config);
+                initEventHandler();
+                resolve(true);
+              }
+          
+        })
+        // for (let k in res.data.components) {
+        //   row = 0;
+        //   this.injectTitle.service(k);
+        //   config[k] = "";
+
+        //   res.data[k].forEach((d, i) => {
+        //     if ((Math.floor(i / CATALOG_PER_ROW)) === row) {
+        //       this.injectRow(row, k);
+        //       row++;
+        //     }
+        //     this.injectService(row-1, d, k);
+
+        //     if (i === res.data[k].length - 1) {
+        //       console.log(config);
+        //       initEventHandler();
+        //       resolve(true);
+        //     }
+        //   })
+        // }
       });
     });
   },
