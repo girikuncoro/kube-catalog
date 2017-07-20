@@ -1,0 +1,20 @@
+{
+  "data": [
+  {
+    "name": "Blog Platform",
+    "imageSrc": "img/kubernetes/k8s-bundle"
+  },
+  {
+    "name": "CI/CD Platform",
+    "imageSrc": "img/kubernetes/k8s-bundle"
+  },
+  {
+    "name": "Machine Learning Infra",
+    "imageSrc": "img/kubernetes/k8s-bundle"
+  },
+  {
+    "name": "Data Pipeline Infra",
+    "imageSrc": "img/kubernetes/k8s-bundle"
+  }
+]
+}

@@ -105,24 +105,39 @@
         /*----------------------------
          Product-carousel-active
         ------------------------------ */
-    $('.product-carousel-active').owlCarousel({
+    // $('.product-carousel-active').owlCarousel({
+    //         loop: true,
+    //         autoplay: false,
+    //         responsive: {
+    //             0: {
+    //                 items: 1
+    //             },
+    //             480: {
+    //                 items: 2
+    //             },
+    //             768: {
+    //                 items: 3
+    //             },
+    //             1000: {
+    //                 items: 4
+    //             },
+    //             1200: {
+    //                 items: 5
+    //             }
+    //         }
+    //     })
+        $('.product-carousel-active').owlCarousel({
             loop: true,
             autoplay: false,
             responsive: {
                 0: {
                     items: 1
                 },
-                480: {
+                768: {
                     items: 2
                 },
-                768: {
-                    items: 3
-                },
-                1000: {
-                    items: 4
-                },
                 1200: {
-                    items: 5
+                    items: 3
                 }
             }
         })

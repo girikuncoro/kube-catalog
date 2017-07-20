@@ -1,0 +1,68 @@
+{
+  "data": [
+  {
+    "name": "Default",
+    "imageSrc": "img/kubernetes/k8s"
+  },
+  {
+    "name": "Postgres",
+    "imageSrc": "img/kubernetes/postgres"
+  },
+  {
+    "name": "Cassandra",
+    "imageSrc": "img/kubernetes/k8s"
+  },
+  {
+    "name": "Mysql",
+    "imageSrc": "img/kubernetes/k8s"
+  },
+  {
+    "name": "Redis",
+    "imageSrc": "img/kubernetes/k8s"
+  },
+  {
+    "name": "MariaDB",
+    "imageSrc": "img/kubernetes/k8s"
+  },
+  {
+    "name": "Spark",
+    "imageSrc": "img/kubernetes/k8s"
+  },
+  {
+    "name": "Memcached",
+    "imageSrc": "img/kubernetes/k8s"
+  },
+  {
+    "name": "Linkerd",
+    "imageSrc": "img/kubernetes/k8s"
+  },
+  {
+    "name": "Kafka",
+    "imageSrc": "img/kubernetes/k8s"
+  },
+  {
+    "name": "Drupal",
+    "imageSrc": "img/kubernetes/k8s"
+  },
+  {
+    "name": "Joomla",
+    "imageSrc": "img/kubernetes/k8s"
+  },
+  {
+    "name": "Datadog",
+    "imageSrc": "img/kubernetes/k8s"
+  },
+  {
+    "name": "Artifactory",
+    "imageSrc": "img/kubernetes/k8s"
+  },
+  {
+    "name": "Gitlab",
+    "imageSrc": "img/kubernetes/k8s"
+  },
+  {
+    "name": "Consul",
+    "imageSrc": "img/kubernetes/k8s"
+  }
+]
+}
