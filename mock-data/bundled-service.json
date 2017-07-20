@@ -1,18 +1,22 @@
 {
   "data": [
   {
+    "id": "123123",
     "name": "Blog Platform",
     "imageSrc": "img/kubernetes/k8s-bundle"
   },
   {
+    "id": "123123",
     "name": "CI/CD Platform",
     "imageSrc": "img/kubernetes/k8s-bundle"
   },
   {
+    "id": "123123",
     "name": "Machine Learning Infra",
     "imageSrc": "img/kubernetes/k8s-bundle"
   },
   {
+    "id": "123123",
     "name": "Data Pipeline Infra",
     "imageSrc": "img/kubernetes/k8s-bundle"
   }

@@ -1,0 +1,40 @@
+{
+  "data": {
+    "database": [
+      {
+        "name": "MySQL",
+        "imageSrc": "img/kubernetes/mysql"
+      },
+      {
+        "name": "Maria DB",
+        "imageSrc": "img/kubernetes/mariadb"
+      },
+      {
+        "name": "PostgreSQL",
+        "imageSrc": "img/kubernetes/postgres"
+      },
+      {
+        "name": "Cockroach DB",
+        "imageSrc": "img/kubernetes/cockroachdb"
+      }
+    ],
+    "blog": [
+      {
+        "name": "Wordpress",
+        "imageSrc": "img/kubernetes/k8s"
+      },
+      {
+        "name": "Joomla",
+        "imageSrc": "img/kubernetes/k8s"
+      },
+      {
+        "name": "Drupal",
+        "imageSrc": "img/kubernetes/k8s"
+      },
+      {
+        "name": "Ghost",
+        "imageSrc": "img/kubernetes/k8s"
+      }
+    ]
+  }
+}
