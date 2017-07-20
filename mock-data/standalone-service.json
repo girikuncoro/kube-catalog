@@ -1,68 +1,9 @@
 {
-  "data": [
-  {
-    "name": "Default",
-    "imageSrc": "img/kubernetes/k8s"
-  },
-  {
-    "name": "Postgres",
-    "imageSrc": "img/kubernetes/postgres"
-  },
-  {
-    "name": "Cassandra",
-    "imageSrc": "img/kubernetes/k8s"
-  },
-  {
-    "name": "Mysql",
-    "imageSrc": "img/kubernetes/k8s"
-  },
-  {
-    "name": "Redis",
-    "imageSrc": "img/kubernetes/k8s"
-  },
-  {
-    "name": "MariaDB",
-    "imageSrc": "img/kubernetes/k8s"
-  },
-  {
-    "name": "Spark",
-    "imageSrc": "img/kubernetes/k8s"
-  },
-  {
-    "name": "Memcached",
-    "imageSrc": "img/kubernetes/k8s"
-  },
-  {
-    "name": "Linkerd",
-    "imageSrc": "img/kubernetes/k8s"
-  },
-  {
-    "name": "Kafka",
-    "imageSrc": "img/kubernetes/k8s"
-  },
-  {
-    "name": "Drupal",
-    "imageSrc": "img/kubernetes/k8s"
-  },
-  {
-    "name": "Joomla",
-    "imageSrc": "img/kubernetes/k8s"
-  },
-  {
-    "name": "Datadog",
-    "imageSrc": "img/kubernetes/k8s"
-  },
-  {
-    "name": "Artifactory",
-    "imageSrc": "img/kubernetes/k8s"
-  },
-  {
-    "name": "Gitlab",
-    "imageSrc": "img/kubernetes/k8s"
-  },
-  {
-    "name": "Consul",
-    "imageSrc": "img/kubernetes/k8s"
+  "name": "MySQL",
+  "imgSrc": "img/mysql-logo.png",
+  "id": "psql-id",
+  "data": {
+    "short_intro": "MySQL is the world's most popular open source database. Whether you are a fast growing web property, technology ISV or large enterprise, MySQL can cost-effectively help you deliver high performance, scalable database applications.",
+    "introduction": "It enables you to type in queries interactively, issue them to PostgreSQL, and see the query results. Alternatively, input can be from a file. In addition, it provides a number of meta-commands and various shell-like features to facilitate writing scripts and automating a wide variety of tasks."
   }
-]
 }

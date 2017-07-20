@@ -1,24 +1,26 @@
-json = '{' + 
-			'"0": {"name": "psql", "id": "id1", "data": {"bundle": "bundle1", "access_url": "www.vmware.com", "credential": "credential1", "status": "starting"}},' + 
-			'"1": {"name": "tomcat", "id": "id2", "data": {"bundle": "bundle2", "access_url": "www.tomcat.com", "credential": "credential2", "status": "finished"}}' + 
-		'}';
-services = getServiceName();
-num_rows = services.length;
-num_cols = 5;
-populateTable();
+const services_status = 'mock-data/status.json';
+const NUM_COLS = 5;
 
-function getServiceName() {
-	json_obj = JSON.parse(json);
-	num_items = Object.keys(json_obj).length;
-	services = [];
-	for (i = 0; i < num_items; i++) {
-		services.push(json_obj[i]);
-	}
-	return services;
+getServiceData();
+
+
+function getServiceData() {
+	$.getJSON(services_status, (res) => {
+		console.log(res);
+		services = [];
+		for (i = 0; i < res.results.length; i++) {
+			services.push(res.results[i]);
+		}
+		num_rows = services.length;
+		num_cols = NUM_COLS;
+
+		populateTable(services, num_rows, num_cols);
+	});
 }
 
 
-function populateTable() {
+function populateTable(services, num_rows, num_cols) {
+	debugger;
 	table = document.getElementById("statusTable");
 	for (var i = 0; i < num_rows; i++) {
 		row = table.insertRow(i);
@@ -41,11 +43,6 @@ function populateTable() {
 	    cell4.innerHTML= data.status;
 	}
 }
-
-function getJson() {
-
-}
-
 
 
 
