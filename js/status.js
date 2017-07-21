@@ -11,6 +11,7 @@ function getServiceData() {
 		console.log(res);
 		services = [];
 		for (i = 0; i < res.data.length; i++) {
+			debugger;
 			services.push(res.data[i]);
 		}
 		num_rows = services.length;
