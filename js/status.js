@@ -11,7 +11,6 @@ function getServiceData() {
 		console.log(res);
 		services = [];
 		for (i = 0; i < res.data.length; i++) {
-			debugger;
 			services.push(res.data[i]);
 		}
 		num_rows = services.length;
@@ -30,11 +29,17 @@ function populateTable(services, num_rows, num_cols) {
 		j = 0;
 		cell0 = row.insertCell(j++);
 	    cell0.innerHTML= services[i].name;
+	    if (services[i].name == null || services[i].name.length == 0) {
+			cell0.innerHTML= "N/A";
+		}
 
 	    data = services[i];
 	    status = data.status;
 	    cell1 = row.insertCell(j++);
 	    cell1.innerHTML= data.bundle;
+	    if (data.bundle == null || data.bundle .length == 0) {
+			cell1.innerHTML= "N/A";
+		}
 
 	    cell2 = row.insertCell(j++);
 	    cell3 = row.insertCell(j++);
