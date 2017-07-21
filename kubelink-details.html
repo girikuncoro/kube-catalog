@@ -91,7 +91,32 @@
 													<div class="col-lg-10">
 														<div class="single-service" style="width:120px; height:120px;">
 															<div class="service-img" style="padding-top: 0px; padding-bottom: 0px;">
-																<img src="img/1.png" class="" alt="" />
+																<script type="text/javascript">
+																	function diffImage1(img) {
+																		if(img.src.match("img/1.png")) {
+																			img.src = "img/selected.png";
+																		} else {
+																			img.src = "img/1.png";
+																		}
+																	}
+
+																	function diffImage2(img) {
+																		if(img.src.match("img/2.png")) {
+																			img.src = "img/selected.png";
+																		} else {
+																			img.src = "img/2.png";
+																		}
+																	}
+
+																	function diffImage3(img) {
+																		if(img.src.match("img/3.png")) {
+																			img.src = "img/selected.png";
+																		} else {
+																			img.src = "img/3.png";
+																		}
+																	}
+																</script>
+																<img src="img/1.png" onclick=diffImage1(this) />
 															</div>
 															<h3>Dragon</h3>
 														</div>						
@@ -99,7 +124,7 @@
 													<div class="col-lg-10">
 														<div class="single-service" style="width:120px; height:120px;">
 															<div class="service-img" style="padding-top: 0px; padding-bottom: 0px">
-																<img src="img/2.png" class="" alt="" />
+																<img src="img/2.png" onclick=diffImage2(this) />
 															</div>
 															<h3>Tiger</h3>
 														</div>						
@@ -107,7 +132,7 @@
 													<div class="col-lg-10">
 														<div class="single-service" style="width:120px; height:120px;">
 															<div class="service-img" style="padding-top: 0px; padding-bottom: 0px">
-																<img src="img/3.png" class="" alt="" />
+																<img src="img/3.png" onclick=diffImage3(this) />
 															</div>
 															<h3>Rabbit</h3>
 														</div>						
