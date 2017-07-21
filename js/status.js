@@ -1,4 +1,7 @@
-const services_status = 'mock-data/status.json';
+// const services_status = 'mock-data/status.json';
+const BASE_URL = "http://orch.kubelink.borathon.photon-infra.com";
+const ENDPOINT = "/runninginstances";
+const services_status = BASE_URL + ENDPOINT;
 const NUM_COLS = 5;
 
 getServiceData();

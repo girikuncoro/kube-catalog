@@ -1,4 +1,5 @@
-standalone_service = 'mock-data/standalone-service.json';
+// standalone_service = 'mock-data/standalone-service.json';
+standalone_service = 'mock-data/standalone-gitlab.json';
 
 var service_name;
 populateDetails();
